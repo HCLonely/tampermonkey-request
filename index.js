@@ -1,3 +1,12 @@
+// ==UserScript==
+// @name               TM_request
+// @namespace          TM_request
+// @version            1.0.0
+// @description        Tampermonkey http request 库
+// @author             HCLonely
+// @license            MIT
+// ==/UserScript==
+
 /* eslint-disable camelcase */
 window.TM_request = function TM_request (options) {
   return new Promise((resolve, reject) => {
