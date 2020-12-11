@@ -4,4 +4,4 @@ Tampermonkey http request 库
 
 or
 
-`// @require https://cdn.jsdelivr.net/gh/HCLonely/tampermonkey-request@1.0.0/TM_request.min.js`
+`// @require https://cdn.jsdelivr.net/gh/HCLonely/tampermonkey-request@1.0.1/TM_request.min.js`

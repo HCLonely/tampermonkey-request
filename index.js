@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name               TM_request
 // @namespace          TM_request
-// @version            1.0.0
+// @version            1.0.1
 // @description        Tampermonkey http request 库
 // @author             HCLonely
 // @license            MIT
 // ==/UserScript==
 
 /* eslint-disable camelcase */
-window.TM_request = function TM_request (options) {
+window.TM_request = function TM_request(options, t = 0) {
+  options.retry = options.retry ?? 0
   return new Promise((resolve, reject) => {
     options.onload = options.onload || (response => {
       response.requestOptions = options
@@ -33,7 +34,12 @@ window.TM_request = function TM_request (options) {
     GM_xmlhttpRequest(options)
   })
     .then(response => response)
-    .catch(error => {
-      console.error(error)
+    .catch(async error => {
+      if (t >= options.retry) {
+        console.error(error)
+        throw error
+      } else {
+        return await TM_request(options, ++t)
+      }
     })
 }
