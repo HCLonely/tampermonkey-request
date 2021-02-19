@@ -7,7 +7,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 // ==UserScript==
 // @name               TM_request
 // @namespace          TM_request
-// @version            1.0.1
+// @version            1.0.2
 // @description        Tampermonkey http request 库
 // @author             HCLonely
 // @license            MIT
