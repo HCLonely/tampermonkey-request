@@ -8,7 +8,7 @@
 // ==/UserScript==
 
 /* eslint-disable camelcase */
-window.TM_request = function TM_request(options, t = 0) {
+function TM_request (options, t = 0) {
   options.retry = options.retry ?? 0
   return new Promise((resolve, reject) => {
     options.onload = options.onload || (response => {

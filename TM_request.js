@@ -14,7 +14,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 // ==/UserScript==
 
 /* eslint-disable camelcase */
-window.TM_request = function TM_request(options) {
+function TM_request(options) {
   var _options$retry;
 
   var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
@@ -80,4 +80,4 @@ window.TM_request = function TM_request(options) {
       return _ref.apply(this, arguments);
     };
   }());
-};
+}
