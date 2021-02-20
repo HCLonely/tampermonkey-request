@@ -7,7 +7,7 @@
 // @license            MIT
 // ==/UserScript==
 
-/* eslint-disable camelcase */
+/* eslint-disable camelcase, no-unused-vars */
 function TM_request (options, t = 0) {
   options.retry = options.retry ?? 0
   return new Promise((resolve, reject) => {
